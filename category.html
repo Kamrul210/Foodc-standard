@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Foodie Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@300;400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:+8801XXXXXXXXX"><i class="fas fa-phone-alt"></i> +880 1X-XXXX-XXXX</a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i> Dinajpur, Bangladesh</a>
+    <a href="#"><i class="fas fa-clock"></i> Open: 10AM – 11PM</a>
+  </div>
+  <div class="topbar-right">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><i class="fas fa-bowl-food"></i></div>
+    <div class="logo-text">Foodie<span>Hub</span><small>Food Court</small></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#categories" class="active">Menu</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#footer">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/8801XXXXXXXXX" class="nav-order-btn" target="_blank"><i class="fab fa-whatsapp"></i> Order Now</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- CATEGORY HERO -->
+<div class="cat-hero" id="catHero">
+  <div class="cat-hero-overlay"></div>
+  <div class="cat-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span id="catBreadcrumb">Menu</span></div>
+    <h1 id="catHeroTitle" class="cat-hero-title">Our <span>Menu</span></h1>
+    <p id="catHeroDesc" class="cat-hero-desc">Fresh, delicious and made just for you</p>
+  </div>
+</div>
+
+<!-- ITEMS SECTION -->
+<section id="itemsSection">
+  <div class="sec-header reveal">
+    <p class="sec-label" id="itemsLabel">Menu Items</p>
+    <h2 class="sec-title" id="itemsTitle">Choose Your <span>Favourite</span></h2>
+  </div>
+
+  <!-- Filter Badges -->
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterItems('all')">All</button>
+    <button class="filter-btn" onclick="filterItems('bestseller')"><i class="fas fa-fire"></i> Bestseller</button>
+    <button class="filter-btn" onclick="filterItems('new')"><i class="fas fa-star"></i> New</button>
+    <button class="filter-btn" onclick="filterItems('spicy')"><i class="fas fa-pepper-hot"></i> Spicy</button>
+  </div>
+
+  <div class="items-grid" id="itemsGrid"></div>
+</section>
+
+<!-- OTHER CATEGORIES -->
+<section id="otherCats" style="background:#f8f8f8;">
+  <div class="sec-header reveal">
+    <p class="sec-label">Explore More</p>
+    <h2 class="sec-title">Other <span>Categories</span></h2>
+  </div>
+  <div class="categories-grid" id="otherCatsGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Foodie<span>Hub</span></div>
+      <div class="red-line"></div>
+      <p>Your favourite food court bringing the best flavors together under one roof.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/8801XXXXXXXXX"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Quick Links</h4>
+      <div class="red-line"></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#categories">Menu</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Our Menu</h4>
+      <div class="red-line"></div>
+      <ul class="footer-links" id="footerMenuLinks"></ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Contact Us</h4>
+      <div class="red-line"></div>
+      <ul class="footer-contact">
+        <li><i class="fas fa-map-marker-alt"></i> Dinajpur, Bangladesh</li>
+        <li><i class="fas fa-phone-alt"></i> +880 1X-XXXX-XXXX</li>
+        <li><i class="fas fa-envelope"></i> info@foodiehub.com</li>
+        <li><i class="fas fa-clock"></i> Open: 10AM – 11PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FoodieHub Food Court. All Rights Reserved.</p>
+    <p>Powered by <span>Solvixa</span></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/8801XXXXXXXXX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
