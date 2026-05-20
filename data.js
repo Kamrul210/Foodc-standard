@@ -3,7 +3,7 @@
 // Edit this file in VS Code to add/edit sections and items
 // ============================================================
 
-const WHATSAPP_NUMBER = "8801XXXXXXXXX"; // Change to your number
+const WHATSAPP_NUMBER = "8801830244478"; // Change to your number
 
 const categories = [
   {
